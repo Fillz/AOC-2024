@@ -5,7 +5,7 @@ lines = open(0).read().splitlines()
 count = 0
 for line in lines:
   nums = list(map(int, line.split()))
-  
+
   is_safe = False
   for i in range(len(nums)):
     flag = False
@@ -19,7 +19,7 @@ for line in lines:
       increasing = True
 
     for i in range(len(new_nums) - 1):
-      if (increasing and new_nums[i] > new_nums[i+1]) or (not increasing and new_nums[i] < new_nums[i+1]) or new_nums[i] == new_nums[i+1] or abs(new_nums[i] - new_nums[i+1]) > 3:
+      if (increasing and new_nums[i] > new_nums[i + 1]) or (not increasing and new_nums[i] < new_nums[i + 1]) or new_nums[i] == new_nums[i + 1] or abs(new_nums[i] - new_nums[i + 1]) > 3:
         flag = True
         break
 
